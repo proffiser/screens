@@ -27,20 +27,25 @@ class ConsaveButton extends StatelessWidget {
               ),
             ),
             Container(
-              width: width - 10,
-              height: height - 16,
+              width: width - AppConst.sdp(context, 10),
+              height: height - AppConst.sdp(context, 16),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                gradient: const LinearGradient(
+                borderRadius: BorderRadius.circular(AppConst.sdp(context, 5)),
+                gradient: LinearGradient(
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
-                  colors: [Color(0xff8f8f8f), Color(0x00252525)],
+                  stops: [0.1, 0.3],
+                  colors: [
+                    Color(0xff8f8f8f).withOpacity(0.05),
+                    Color(0xff252525),
+                  ],
                 ),
               ),
             ),
             Text(
               text,
               style: TextStyle(
+                fontFamily: "Norm",
                 color: Colors.white,
                 fontSize: AppConst.sdp(context, 22),
                 fontWeight: FontWeight.w500,

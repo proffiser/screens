@@ -29,32 +29,31 @@ class RadioInterface extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.only(
-            bottom: sdp(context, 58),
-            left: sdp(context, 60),
-          ),
-          child:
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: [
-              //     Column(
-              //       mainAxisAlignment: MainAxisAlignment.center,
-              //       children: [
-              //         Center(child: StripeCenter()),
-              //       ],
-              //     ),
-              //   ],
-              // )
-              const Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [Menu()],
-              ),
-            ],
-          ),
-        ),
+            padding: EdgeInsets.only(
+              bottom: sdp(context, 58),
+              left: sdp(context, 60),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(child: StripeCenter()),
+                  ],
+                ),
+              ],
+            )
+            //     const Row(
+            //   mainAxisAlignment: MainAxisAlignment.start,
+            //   children: [
+            //     Column(
+            //       mainAxisAlignment: MainAxisAlignment.end,
+            //       children: [StripeCenter()],
+            //     ),
+            //   ],
+            // ),
+            ),
         //  Align(alignment: Alignment.bottomLeft, child: MainButton())),
       ),
     );
