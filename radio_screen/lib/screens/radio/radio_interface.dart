@@ -50,7 +50,7 @@ class RadioInterface extends StatelessWidget {
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [Menu()],
+                children: [StripeScreen()],
               ),
             ],
           ),
