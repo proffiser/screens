@@ -35,6 +35,7 @@ class OneStripeGroupe extends StatelessWidget {
                   ? GradientText(
                       name,
                       style: TextStyle(
+                        fontFamily: "Norm",
                         fontSize: AppConst.sdp(context, 27),
                         fontWeight: FontWeight.w700,
                       ),
@@ -50,6 +51,7 @@ class OneStripeGroupe extends StatelessWidget {
                   : GradientText(
                       number!,
                       style: TextStyle(
+                        fontFamily: "Norm",
                         fontSize: AppConst.sdp(context, 70),
                         fontWeight: FontWeight.w700,
                       ),
