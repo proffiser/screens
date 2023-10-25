@@ -6,11 +6,12 @@ class MainButton extends StatelessWidget {
   final List<Color> color;
   final String text;
   final double width;
-  const MainButton(
-      {super.key,
-      required this.color,
-      required this.text,
-      required this.width});
+  const MainButton({
+    super.key,
+    required this.color,
+    required this.text,
+    required this.width,
+  });
   @override
   Widget build(BuildContext context) {
     return ButtonAnimator(

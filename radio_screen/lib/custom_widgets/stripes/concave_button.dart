@@ -5,11 +5,12 @@ class ConsaveButton extends StatelessWidget {
   final double height;
   final double width;
   final String text;
-  const ConsaveButton(
-      {super.key,
-      required this.height,
-      required this.width,
-      required this.text});
+  const ConsaveButton({
+    super.key,
+    required this.height,
+    required this.width,
+    required this.text,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +35,10 @@ class ConsaveButton extends StatelessWidget {
                 gradient: LinearGradient(
                   begin: Alignment.bottomCenter,
                   end: Alignment.topCenter,
-                  stops: [0.1, 0.3],
+                  stops: const [0.1, 0.3],
                   colors: [
-                    Color(0xff8f8f8f).withOpacity(0.05),
-                    Color(0xff252525),
+                    const Color(0xff8f8f8f).withOpacity(0.05),
+                    const Color(0xff252525),
                   ],
                 ),
               ),

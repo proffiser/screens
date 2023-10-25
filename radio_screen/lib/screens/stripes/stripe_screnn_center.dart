@@ -20,9 +20,10 @@ class StripeCenter extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(top: AppConst.sdp(context, 12)),
           child: ConsaveButton(
-              height: AppConst.sdp(context, 47),
-              text: "Отмена",
-              width: AppConst.sdp(context, 193)),
+            height: AppConst.sdp(context, 47),
+            text: "Отмена",
+            width: AppConst.sdp(context, 193),
+          ),
         ),
       ],
     );

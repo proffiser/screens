@@ -4,7 +4,7 @@ import 'package:radio_screen/const.dart';
 import 'package:radio_screen/custom_widgets/gredient_text.dart';
 
 class OneStripeGroupe extends StatelessWidget {
-  OneStripeGroupe({
+  const OneStripeGroupe({
     super.key,
     required this.svg,
     required this.name,
@@ -14,9 +14,9 @@ class OneStripeGroupe extends StatelessWidget {
   });
   final String svg;
   final String name;
-  String? hp;
+  final String? hp;
   final List<Color> textColor;
-  String? number;
+  final String? number;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -59,7 +59,7 @@ class OneStripeGroupe extends StatelessWidget {
                     ),
             ],
           ),
-        )
+        ),
       ],
     );
   }

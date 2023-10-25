@@ -5,8 +5,8 @@ import 'package:radio_screen/custom_widgets/menu/button_up_v.dart';
 import 'package:radio_screen/custom_widgets/menu/volume.dart';
 
 class VolumeMenu extends StatefulWidget {
-  VolumeMenu({super.key, required this.expand});
-  bool expand;
+  const VolumeMenu({super.key, required this.expand});
+  final bool expand;
   @override
   State<VolumeMenu> createState() => _VolumeMenuState();
 }

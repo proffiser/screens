@@ -23,7 +23,6 @@ class _MenuState extends State<Menu> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onDoubleTap: () {
-        print("rap");
         setState(() {
           expand = !expand;
         });
@@ -69,14 +68,15 @@ class _MenuState extends State<Menu> {
                             ),
                           ),
                           Center(
-                            child: Container(
-                                width: AppConst.sdp(context, 320),
-                                child: const TextField(
-                                  autofocus: true,
-                                  style: TextStyle(color: Colors.white),
-                                  decoration:
-                                      InputDecoration(border: InputBorder.none),
-                                )),
+                            child: SizedBox(
+                              width: AppConst.sdp(context, 320),
+                              child: const TextField(
+                                autofocus: true,
+                                style: TextStyle(color: Colors.white),
+                                decoration:
+                                    InputDecoration(border: InputBorder.none),
+                              ),
+                            ),
                           ),
                           Padding(
                             padding: EdgeInsets.only(
@@ -92,14 +92,15 @@ class _MenuState extends State<Menu> {
                           ),
                         ],
                       ),
-                      Container(
+                      SizedBox(
                         height: 100,
                         width: 300,
                         child: Padding(
                           padding: EdgeInsets.only(
-                              top: AppConst.sdp(context, 10),
-                              left: AppConst.sdp(context, 25),
-                              right: AppConst.sdp(context, 25)),
+                            top: AppConst.sdp(context, 10),
+                            left: AppConst.sdp(context, 25),
+                            right: AppConst.sdp(context, 25),
+                          ),
                           child: Slide(
                             child: SongContainer(
                               color: AppConst().purpleButton,
@@ -107,7 +108,7 @@ class _MenuState extends State<Menu> {
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   )
                 : Column(

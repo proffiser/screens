@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:radio_screen/const.dart';
 
 class Slide extends StatelessWidget {
-  Slide({super.key, required this.child});
-  Widget child;
+  const Slide({super.key, required this.child});
+  final Widget child;
   @override
   Widget build(BuildContext context) {
     return RawScrollbar(
