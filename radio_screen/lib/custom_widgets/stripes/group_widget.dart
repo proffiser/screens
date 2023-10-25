@@ -39,7 +39,10 @@ class OneStripeGroupe extends StatelessWidget {
                         fontSize: AppConst.sdp(context, 27),
                         fontWeight: FontWeight.w700,
                       ),
-                      gradient: LinearGradient(colors: textColor),
+                      gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: textColor),
                     )
                   : const SizedBox.shrink(),
               hp != null
@@ -52,10 +55,14 @@ class OneStripeGroupe extends StatelessWidget {
                       number!,
                       style: TextStyle(
                         fontFamily: "Norm",
-                        fontSize: AppConst.sdp(context, 70),
-                        fontWeight: FontWeight.w700,
+                        fontSize: AppConst.sdp(context, 59),
+                        fontWeight: FontWeight.w500,
                       ),
-                      gradient: LinearGradient(colors: textColor),
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: textColor,
+                      ),
                     ),
             ],
           ),
