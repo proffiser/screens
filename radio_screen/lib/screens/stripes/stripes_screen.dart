@@ -33,7 +33,7 @@ class StripeScreen extends StatelessWidget {
           svg: "assets/image/kv4.svg",
           name: "Maks Maks",
           hp: "assets/image/full_stripe_hp.svg",
-          textColor: AppConst().redGredient,
+          textColor: AppConst().silverGredient,
         ),
         SizedBox(
           height: AppConst.sdp(context, 10),
@@ -48,7 +48,7 @@ class StripeScreen extends StatelessWidget {
           svg: "assets/image/kv2.svg",
           name: "Maks Maks",
           number: 5.toString(),
-          textColor: AppConst().redGredient,
+          textColor: AppConst().silverGredient,
         ),
       ],
     );

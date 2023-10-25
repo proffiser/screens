@@ -34,6 +34,14 @@ flutter:
         - asset: assets/fonts/Akrobat-Light.otf
         - asset: assets/fonts/Akrobat-SemiBold.otf
         - asset: assets/fonts/Akrobat-Thin.otf
+    - family: Norm
+      fonts:    
+        - asset: assets/fonts/TTNorms-Black.ttf
+        - asset: assets/fonts/TTNorms-Bold.ttf
+        - asset: assets/fonts/TTNorms-ExtraBold.ttf
+        - asset: assets/fonts/TTNorms-Light.ttf
+        - asset: assets/fonts/TTNorms-Medium.ttf
+        - asset: assets/fonts/TTNorms-Regular.ttf    
   uses-material-design: true
   
   
