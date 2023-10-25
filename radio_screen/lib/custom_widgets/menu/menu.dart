@@ -45,18 +45,18 @@ class _MenuState extends State<Menu> {
             child: state is SearchMenu
                 ? Padding(
                     padding: EdgeInsets.only(
-                      left: AppConst.sdp(context, 33),
+                      left: AppConst.sdp(context, 30),
                       right: AppConst.sdp(context, 20),
-                      top: AppConst.sdp(context, 22),
-                      bottom: AppConst.sdp(context, 29),
+                      top: AppConst.sdp(context, 20),
+                      bottom: AppConst.sdp(context, 30),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          mainAxisSize: MainAxisSize.max,
-                          crossAxisAlignment: CrossAxisAlignment.end,
+                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          // mainAxisSize: MainAxisSize.max,
+                          // crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Padding(
                               padding: EdgeInsets.only(
@@ -72,15 +72,17 @@ class _MenuState extends State<Menu> {
                                 ),
                               ),
                             ),
-                            Center(
-                              child: SizedBox(
-                                  width: AppConst.sdp(context, 380),
-                                  child: const TextField(
-                                    autofocus: true,
-                                    style: TextStyle(color: Colors.white),
-                                    decoration: InputDecoration(
-                                        border: InputBorder.none),
-                                  )),
+                            SizedBox(
+                              width: AppConst.sdp(context, 590),
+                              child: const TextField(
+                                autofocus: true,
+                                style: TextStyle(
+                                    fontFamily: "Norm",
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white),
+                                decoration:
+                                    InputDecoration(border: InputBorder.none),
+                              ),
                             ),
                             MainButton(
                               color: AppConst().redButton,
@@ -90,13 +92,17 @@ class _MenuState extends State<Menu> {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 100,
-                          width: 300,
-                          child: Slide(
-                            child: SongContainer(
-                              color: AppConst().purpleButton,
-                              text: 'Baby Type',
+                        Padding(
+                          padding:
+                              EdgeInsets.only(top: AppConst.sdp(context, 25)),
+                          child: SizedBox(
+                            height: AppConst.sdp(context, 400),
+                            width: AppConst.sdp(context, 960),
+                            child: Slide(
+                              child: SongContainer(
+                                color: AppConst().purpleButton,
+                                text: 'Baby Type',
+                              ),
                             ),
                           ),
                         ),
