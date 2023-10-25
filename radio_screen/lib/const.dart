@@ -22,9 +22,9 @@ class AppConst {
     const Color(0xff9c9c9c)
   ];
   List<Color> redGredient = [
-    const Color(0xff690707),
     const Color(0xffC62929),
-    const Color(0xff380404)
+    const Color(0xff380404),
+    const Color(0xff690707),
   ];
   /////////////
 }

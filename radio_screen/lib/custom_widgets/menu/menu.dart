@@ -88,6 +88,7 @@ class _MenuState extends State<Menu> {
                               color: AppConst().redButton,
                               text: 'Закрыть',
                               width: 286,
+                              changeGredient: true,
                             ),
                           ),
                         ],
@@ -164,6 +165,7 @@ class _MenuState extends State<Menu> {
                                     color: AppConst().purpleButton,
                                     text: 'Радио',
                                     width: 541,
+                                    changeGredient: false,
                                   ),
                                   SizedBox(
                                     height: AppConst.sdp(context, 34),
@@ -172,6 +174,7 @@ class _MenuState extends State<Menu> {
                                     color: AppConst().purpleButton,
                                     text: 'Установить мелодию',
                                     width: 541,
+                                    changeGredient: false,
                                   ),
                                   SizedBox(
                                     height: AppConst.sdp(context, 34),
@@ -185,6 +188,7 @@ class _MenuState extends State<Menu> {
                                           color: AppConst().purpleButton,
                                           text: 'Взять в руки',
                                           width: 541,
+                                          changeGredient: false,
                                         ),
                                         SizedBox(
                                           height: AppConst.sdp(context, 34),
@@ -193,6 +197,7 @@ class _MenuState extends State<Menu> {
                                           color: AppConst().purpleButton,
                                           text: 'Убрать в инвентарь',
                                           width: 541,
+                                          changeGredient: false,
                                         ),
                                         SizedBox(
                                           height: AppConst.sdp(context, 34),
@@ -205,6 +210,7 @@ class _MenuState extends State<Menu> {
                                     color: AppConst().redButton,
                                     text: 'Закрыть',
                                     width: 541,
+                                    changeGredient: true,
                                   ),
                                 ],
                               ),

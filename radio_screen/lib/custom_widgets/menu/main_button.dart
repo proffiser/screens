@@ -6,11 +6,14 @@ class MainButton extends StatelessWidget {
   final List<Color> color;
   final String text;
   final double width;
-  const MainButton(
-      {super.key,
-      required this.color,
-      required this.text,
-      required this.width});
+  bool changeGredient;
+  MainButton({
+    super.key,
+    required this.color,
+    required this.text,
+    required this.width,
+    required this.changeGredient,
+  });
   @override
   Widget build(BuildContext context) {
     return ButtonAnimator(
@@ -20,8 +23,9 @@ class MainButton extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(AppConst.sdp(context, 10)),
           gradient: LinearGradient(
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
+            begin:
+                changeGredient ? Alignment.centerRight : Alignment.centerLeft,
+            end: changeGredient ? Alignment.centerLeft : Alignment.centerRight,
             colors: color,
           ),
         ),
