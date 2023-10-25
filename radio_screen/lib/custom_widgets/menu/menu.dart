@@ -43,20 +43,25 @@ class _MenuState extends State<Menu> {
               ),
             ),
             child: state is SearchMenu
-                ? Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        mainAxisSize: MainAxisSize.max,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.only(
-                              left: AppConst.sdp(context, 33),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.only(bottom: 5),
+                ? Padding(
+                    padding: EdgeInsets.only(
+                      left: AppConst.sdp(context, 33),
+                      right: AppConst.sdp(context, 20),
+                      top: AppConst.sdp(context, 22),
+                      bottom: AppConst.sdp(context, 29),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(
+                                bottom: AppConst.sdp(context, 5),
+                              ),
                               child: GestureDetector(
                                 onTap: () {
                                   context.read<MenuCubit>().expand();
@@ -67,40 +72,27 @@ class _MenuState extends State<Menu> {
                                 ),
                               ),
                             ),
-                          ),
-                          Center(
-                            child: Container(
-                                width: AppConst.sdp(context, 320),
-                                child: const TextField(
-                                  autofocus: true,
-                                  style: TextStyle(color: Colors.white),
-                                  decoration:
-                                      InputDecoration(border: InputBorder.none),
-                                )),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                              right: AppConst.sdp(context, 0),
-                              left: AppConst.sdp(context, 10),
-                              top: AppConst.sdp(context, 25),
+                            Center(
+                              child: SizedBox(
+                                  width: AppConst.sdp(context, 380),
+                                  child: const TextField(
+                                    autofocus: true,
+                                    style: TextStyle(color: Colors.white),
+                                    decoration: InputDecoration(
+                                        border: InputBorder.none),
+                                  )),
                             ),
-                            child: MainButton(
+                            MainButton(
                               color: AppConst().redButton,
                               text: 'Закрыть',
                               width: 286,
                               changeGredient: true,
                             ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        height: 100,
-                        width: 300,
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                              top: AppConst.sdp(context, 10),
-                              left: AppConst.sdp(context, 25),
-                              right: AppConst.sdp(context, 25)),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 100,
+                          width: 300,
                           child: Slide(
                             child: SongContainer(
                               color: AppConst().purpleButton,
@@ -108,8 +100,8 @@ class _MenuState extends State<Menu> {
                             ),
                           ),
                         ),
-                      )
-                    ],
+                      ],
+                    ),
                   )
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

@@ -30,8 +30,9 @@ class SongContainer extends StatelessWidget {
             child: Text(
               text,
               style: TextStyle(
+                fontFamily: 'Akrobat',
                 fontSize: AppConst.sdp(context, 40),
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.w500,
                 color: Colors.white,
               ),
             ),
