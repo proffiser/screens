@@ -36,8 +36,8 @@ class ConsaveButton extends StatelessWidget {
                   end: Alignment.topCenter,
                   stops: [0.1, 0.3],
                   colors: [
-                    Color(0xff8f8f8f).withOpacity(0.05),
-                    Color(0xff252525),
+                    Color(0xff8f8f8f).withOpacity(0.01),
+                    Color(0xff252525).withOpacity(0.5),
                   ],
                 ),
               ),

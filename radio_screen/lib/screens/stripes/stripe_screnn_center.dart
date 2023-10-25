@@ -18,7 +18,8 @@ class StripeCenter extends StatelessWidget {
           textColor: AppConst().silverGredient,
         ),
         Padding(
-          padding: EdgeInsets.only(top: AppConst.sdp(context, 12)),
+          padding: EdgeInsets.only(
+              top: AppConst.sdp(context, 12), left: AppConst.sdp(context, 26)),
           child: ConsaveButton(
               height: AppConst.sdp(context, 47),
               text: "Отмена",
