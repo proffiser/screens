@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:radio_screen/screens/dialog_screens/dialogs.dart';
+import 'package:radio_screen/screens/dialog_screens/widgets/dialog_continer.dart';
 import 'package:radio_screen/screens/stripes/stripe_screnn_center.dart';
 
 double sdp(BuildContext context, double px) {
@@ -33,11 +35,11 @@ class RadioInterface extends StatelessWidget {
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Center(child: StripeCenter()),
+                  Center(child: DialogScreens()),
                 ],
               ),
             ],

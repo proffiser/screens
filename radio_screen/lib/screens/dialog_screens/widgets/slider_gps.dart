@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:radio_screen/const.dart';
+import 'package:radio_screen/screens/dialog_screens/widgets/Item.dart';
 
-class Slide extends StatelessWidget {
-  const Slide({super.key, required this.child});
-  final Widget child;
+class SliderGps extends StatelessWidget {
+  const SliderGps({super.key, required this.itemsNames});
+  final List<String> itemsNames;
   @override
   Widget build(BuildContext context) {
     return RawScrollbar(
@@ -17,11 +18,14 @@ class Slide extends StatelessWidget {
       child: ScrollConfiguration(
         behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
         child: ListView.separated(
-          itemCount: 10,
+          itemCount: itemsNames.length,
           itemBuilder: (context, index) {
             return Padding(
-              padding: EdgeInsets.only(right: AppConst.sdp(context, 60)),
-              child: child,
+              padding: EdgeInsets.only(right: AppConst.sdp(context, 24)),
+              child: Item(
+                changeToRaw: false,
+                text: itemsNames[index],
+              ),
             );
           },
           separatorBuilder: (BuildContext context, int index) {

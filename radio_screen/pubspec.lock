@@ -131,6 +131,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.0"
+  gradient_textfield:
+    dependency: "direct main"
+    description:
+      name: gradient_textfield
+      sha256: df7bfc00d701af4449d93f5d26ec49d27744041b6f73c780992790fb9b8ca66c
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.1"
   http:
     dependency: transitive
     description:
