@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:radio_screen/const.dart';
 import 'package:radio_screen/screens/dialog_screens/widgets/button.dart';
-import 'package:radio_screen/screens/dialog_screens/widgets/gredient_textfield.dart';
 
-class SecondWindow extends StatelessWidget {
+class SecondWindow extends StatefulWidget {
+  const SecondWindow({super.key});
+
+  @override
+  State<SecondWindow> createState() => _SecondWindowState();
+}
+
+class _SecondWindowState extends State<SecondWindow> {
+  TextEditingController textEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,7 +20,7 @@ class SecondWindow extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Настройки безопасности",
+            "Форма заполнения",
             style: TextStyle(
               color: Colors.white,
               fontFamily: "Norm",
@@ -24,8 +32,7 @@ class SecondWindow extends StatelessWidget {
             height: AppConst.sdp(context, 20),
           ),
           Text(
-            """Если ваш аккаунт зарегестрирован через почту -
-вы можете сменить пароль в настройках лаунчера""",
+            """Для отправки формы ответьте на вопрос""",
             style: TextStyle(
               color: Colors.white,
               fontFamily: "Norm",
@@ -36,26 +43,51 @@ class SecondWindow extends StatelessWidget {
           SizedBox(
             height: AppConst.sdp(context, 40),
           ),
-          Gradienttextfield(
-            radius: AppConst.sdp(context, 20),
+          Container(
             height: AppConst.sdp(context, 100),
-            colors: const [Colors.red, Colors.black],
-            text: "Enter Name",
-            fontColor: Colors.black,
-            fontSize: 15,
-            fontWeight: FontWeight.normal,
-            controller: null,
             width: AppConst.sdp(context, 800),
+            decoration: BoxDecoration(
+              color: const Color(0xff7138B8).withOpacity(0.5),
+              borderRadius: BorderRadius.circular(AppConst.sdp(context, 20)),
+            ),
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: TextField(
+                controller: textEditingController,
+                textAlignVertical: TextAlignVertical.center,
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.8),
+                  fontFamily: "Norm",
+                  fontSize: AppConst.sdp(context, 30),
+                  fontWeight: FontWeight.w500,
+                ),
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.only(
+                    left: AppConst.sdp(context, 35),
+                    bottom: AppConst.sdp(context, 40),
+                  ),
+                  border: InputBorder.none,
+                  hintText: "Ваш ответ",
+                  hintStyle: TextStyle(
+                    color: Colors.white.withOpacity(0.5),
+                    fontFamily: "Norm",
+                    fontSize: AppConst.sdp(context, 30),
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
           ),
           SizedBox(
             height: AppConst.sdp(context, 40),
           ),
-          const Button(
+          Button(
             width: 390,
             doubleButton: true,
+            disableButton: textEditingController.text.isEmpty,
             firstButtonText: "Закрыть",
             secondButtonText: "Отправить",
-          )
+          ),
         ],
       ),
     );

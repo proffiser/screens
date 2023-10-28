@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:radio_screen/screens/dialog_screens/dialogs.dart';
-import 'package:radio_screen/screens/dialog_screens/widgets/dialog_continer.dart';
-import 'package:radio_screen/screens/stripes/stripe_screnn_center.dart';
 
 double sdp(BuildContext context, double px) {
   double width = MediaQuery.of(context).size.width;
@@ -35,7 +33,7 @@ class RadioInterface extends StatelessWidget {
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

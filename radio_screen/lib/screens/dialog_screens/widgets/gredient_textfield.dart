@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 
 class Gradienttextfield extends StatefulWidget {
-  Gradienttextfield(
-      {Key? key,
-      required this.height,
-      required this.width,
-      required this.colors,
-      required this.text,
-      this.radius,
-      required this.controller,
-      this.fontColor,
-      this.fontWeight,
-      this.fontSize})
-      : super(key: key);
+  const Gradienttextfield({
+    Key? key,
+    required this.height,
+    required this.width,
+    required this.colors,
+    required this.text,
+    this.radius,
+    required this.controller,
+    this.fontColor,
+    this.fontWeight,
+    this.fontSize,
+  }) : super(key: key);
 
-  double? height;
-  double? width;
-  List<Color> colors;
-  String? text;
-  double? radius;
-  TextEditingController? controller;
-  Color? fontColor;
-  FontWeight? fontWeight;
-  double? fontSize;
+  final double? height;
+  final double? width;
+  final List<Color> colors;
+  final String? text;
+  final double? radius;
+  final TextEditingController? controller;
+  final Color? fontColor;
+  final FontWeight? fontWeight;
+  final double? fontSize;
 
   @override
   _GradienttextfieldState createState() => _GradienttextfieldState();
@@ -37,22 +37,27 @@ class _GradienttextfieldState extends State<Gradienttextfield> {
         height: widget.height,
         width: widget.width,
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: widget.colors,
-            ),
-            borderRadius: BorderRadius.circular(widget.radius ?? 20.0)),
+          gradient: LinearGradient(
+            colors: widget.colors,
+          ),
+          borderRadius: BorderRadius.circular(widget.radius ?? 20.0),
+        ),
         child: TextField(
           controller: widget.controller,
           decoration: InputDecoration(
-              hintText: widget.text,
-              hintStyle: TextStyle(
-                  color: widget.fontColor ?? Colors.black,
-                  fontSize: widget.fontSize ?? 18,
-                  fontWeight: widget.fontWeight ?? FontWeight.bold),
-              enabledBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.transparent)),
-              focusedBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.transparent))),
+            hintText: widget.text,
+            hintStyle: TextStyle(
+              color: widget.fontColor ?? Colors.black,
+              fontSize: widget.fontSize ?? 18,
+              fontWeight: widget.fontWeight ?? FontWeight.bold,
+            ),
+            enabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.transparent),
+            ),
+            focusedBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.transparent),
+            ),
+          ),
         ),
       ),
     );

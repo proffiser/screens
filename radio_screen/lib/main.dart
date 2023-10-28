@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:radio_screen/screens/cubit/menu/menu_cubit.dart';
 import 'package:radio_screen/screens/cubit/volume/volume_cubit.dart';
+import 'package:radio_screen/screens/dialog_screens/cubit/list_element_cubit.dart';
 import 'package:radio_screen/screens/radio/radio_interface.dart';
 
 void main() {
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider<MenuCubit>(
           create: (BuildContext context) => MenuCubit(),
+        ),
+        BlocProvider<ListElementCubit>(
+          create: (BuildContext context) => ListElementCubit(),
         ),
       ],
       child: MaterialApp(

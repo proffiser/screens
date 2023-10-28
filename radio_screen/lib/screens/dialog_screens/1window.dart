@@ -42,7 +42,7 @@ class FirstWindow extends StatelessWidget {
             doubleButton: true,
             firstButtonText: "Нет",
             secondButtonText: "Забрать",
-          )
+          ),
         ],
       ),
     );
