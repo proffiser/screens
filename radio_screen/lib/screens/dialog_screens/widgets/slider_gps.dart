@@ -6,17 +6,20 @@ import 'package:radio_screen/screens/dialog_screens/cubit/list_element_state.dar
 import 'package:radio_screen/screens/dialog_screens/widgets/Item.dart';
 
 class SliderGps extends StatefulWidget {
-  const SliderGps({
-    super.key,
-    required this.itemsNames,
-    this.itemsPrice,
-    this.itemsLastField,
-    required this.changeToRow,
-  });
+  const SliderGps(
+      {super.key,
+      required this.itemsNames,
+      this.itemsPrice,
+      this.itemsLastField,
+      required this.changeToRow,
+      this.width,
+      this.playerOnServer});
   final List<String> itemsNames;
   final List<String>? itemsPrice;
   final List<String>? itemsLastField;
   final bool changeToRow;
+  final double? width;
+  final bool? playerOnServer;
   @override
   State<SliderGps> createState() => _SliderGpsState();
 }
@@ -48,7 +51,10 @@ class _SliderGpsState extends State<SliderGps> {
                       context.read<ListElementCubit>().choosenElement(index);
                     },
                     child: Item(
+                      id: index + 1,
+                      width: widget.width,
                       changeToRaw: widget.changeToRow,
+                      playerOnServer: widget.playerOnServer,
                       text: widget.itemsNames[index],
                       isTaped: index == state.choosenElement ? true : false,
                       naming: widget.itemsLastField![index],

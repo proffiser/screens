@@ -10,13 +10,18 @@ class Item extends StatefulWidget {
     this.naming,
     this.number,
     this.isTaped = false,
+    this.width,
+    this.playerOnServer = false,
+    this.id,
   });
   final bool changeToRaw;
   final String text;
   final String? naming;
   final String? number;
   final bool isTaped;
-
+  final double? width;
+  final bool? playerOnServer;
+  final int? id;
   @override
   State<Item> createState() => _ItemState();
 }
@@ -27,7 +32,9 @@ class _ItemState extends State<Item> {
   Widget build(BuildContext context) {
     return ButtonAnimator(
       childWidget: Container(
-        width: AppConst.sdp(context, 796),
+        width: widget.width != null
+            ? AppConst.sdp(context, widget.width!)
+            : AppConst.sdp(context, 796),
         height: AppConst.sdp(context, 85),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(AppConst.sdp(context, 10)),
@@ -50,28 +57,61 @@ class _ItemState extends State<Item> {
             alignment: Alignment.centerLeft,
             child: widget.changeToRaw
                 ? Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
-                        widget.text,
-                        style: TextStyle(
-                          fontFamily: "Norm",
-                          fontSize: AppConst.sdp(context, 30),
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
+                      SizedBox(
+                        width: AppConst.sdp(context, 36),
+                      ),
+                      Visibility(
+                        visible: widget.playerOnServer!,
+                        child: SizedBox(
+                          width: AppConst.sdp(context, 80),
+                          child: Text(
+                            widget.id.toString(),
+                            style: TextStyle(
+                              fontFamily: "Norm",
+                              fontSize: AppConst.sdp(context, 30),
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Visibility(
+                        visible: widget.playerOnServer!,
+                        child: SizedBox(
+                          width: AppConst.sdp(context, 40),
                         ),
                       ),
                       SizedBox(
-                        width: AppConst.sdp(context, 40),
-                      ),
-                      Text(
-                        widget.naming!,
-                        style: TextStyle(
-                          fontFamily: "Norm",
-                          fontSize: AppConst.sdp(context, 30),
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
+                        width: AppConst.sdp(context, 410),
+                        child: Text(
+                          widget.text,
+                          style: TextStyle(
+                            fontFamily: "Norm",
+                            fontSize: AppConst.sdp(context, 30),
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                          ),
                         ),
+                      ),
+                      SizedBox(
+                        width: AppConst.sdp(context, 80),
+                      ),
+                      SizedBox(
+                        width: AppConst.sdp(context, 160),
+                        child: Text(
+                          widget.naming!,
+                          style: TextStyle(
+                            fontFamily: "Norm",
+                            fontSize: AppConst.sdp(context, 30),
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: AppConst.sdp(context, 80),
                       ),
                       Text(
                         widget.number!,
@@ -81,9 +121,6 @@ class _ItemState extends State<Item> {
                           fontWeight: FontWeight.w500,
                           color: Colors.white,
                         ),
-                      ),
-                      SizedBox(
-                        height: AppConst.sdp(context, 30),
                       ),
                     ],
                   )
