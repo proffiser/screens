@@ -82,55 +82,72 @@ class PlayersOnServer extends StatelessWidget {
                       left: AppConst.sdp(context, 60),
                       right: AppConst.sdp(context, 60),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        // SizedBox(
-                        //   width:
-                        //       AppConst.sdp(context, AppConst.sdp(context, 0)),
-                        // ),
-                        Text(
-                          "id",
-                          style: TextStyle(
-                            fontSize: AppConst.sdp(context, 30),
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(
-                          width: AppConst.sdp(context, 350),
-                          child: Text(
-                            "name",
-                            style: TextStyle(
-                              fontSize: AppConst.sdp(context, 30),
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                          left: AppConst.sdp(context, 30),
+                          right: AppConst.sdp(context, 30)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: AppConst.sdp(context, 80),
+                            child: Text(
+                              "id",
+                              style: TextStyle(
+                                fontFamily: "Norm",
+                                fontSize: AppConst.sdp(context, 30),
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white.withOpacity(0.5),
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: AppConst.sdp(context, 100),
-                          child: Text(
-                            "score",
-                            style: TextStyle(
-                              fontSize: AppConst.sdp(context, 30),
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
+                          SizedBox(
+                            width: AppConst.sdp(context, 40),
+                          ),
+                          SizedBox(
+                            width: AppConst.sdp(context, 440),
+                            child: Text(
+                              "name",
+                              style: TextStyle(
+                                fontFamily: "Norm",
+                                fontSize: AppConst.sdp(context, 30),
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white.withOpacity(0.5),
+                              ),
                             ),
                           ),
-                        ),
-                        Text(
-                          "ping",
-                          style: TextStyle(
-                            fontSize: AppConst.sdp(context, 30),
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white,
+                          SizedBox(
+                            width: AppConst.sdp(context, 40),
                           ),
-                        ),
-                        SizedBox(
-                          height: AppConst.sdp(context, 30),
-                        ),
-                      ],
+                          SizedBox(
+                            width: AppConst.sdp(context, 204),
+                            child: Text(
+                              "score",
+                              style: TextStyle(
+                                fontFamily: "Norm",
+                                fontSize: AppConst.sdp(context, 30),
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white.withOpacity(0.5),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: AppConst.sdp(context, 40),
+                          ),
+                          Text(
+                            "ping",
+                            style: TextStyle(
+                              fontFamily: "Norm",
+                              fontSize: AppConst.sdp(context, 30),
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white.withOpacity(0.5),
+                            ),
+                          ),
+                          SizedBox(
+                            height: AppConst.sdp(context, 30),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

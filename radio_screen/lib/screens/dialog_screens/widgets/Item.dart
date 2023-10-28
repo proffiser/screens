@@ -20,7 +20,7 @@ class Item extends StatefulWidget {
   final String? number;
   final bool isTaped;
   final double? width;
-  final bool? playerOnServer;
+  final bool playerOnServer;
   final int? id;
   @override
   State<Item> createState() => _ItemState();
@@ -34,7 +34,7 @@ class _ItemState extends State<Item> {
       childWidget: Container(
         width: widget.width != null
             ? AppConst.sdp(context, widget.width!)
-            : AppConst.sdp(context, 796),
+            : AppConst.sdp(context, 1000),
         height: AppConst.sdp(context, 85),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(AppConst.sdp(context, 10)),
@@ -63,7 +63,7 @@ class _ItemState extends State<Item> {
                         width: AppConst.sdp(context, 36),
                       ),
                       Visibility(
-                        visible: widget.playerOnServer!,
+                        visible: widget.playerOnServer,
                         child: SizedBox(
                           width: AppConst.sdp(context, 80),
                           child: Text(
@@ -78,13 +78,15 @@ class _ItemState extends State<Item> {
                         ),
                       ),
                       Visibility(
-                        visible: widget.playerOnServer!,
+                        visible: widget.playerOnServer,
                         child: SizedBox(
                           width: AppConst.sdp(context, 40),
                         ),
                       ),
                       SizedBox(
-                        width: AppConst.sdp(context, 410),
+                        width: widget.playerOnServer
+                            ? AppConst.sdp(context, 410)
+                            : AppConst.sdp(context, 443),
                         child: Text(
                           widget.text,
                           style: TextStyle(
@@ -99,7 +101,9 @@ class _ItemState extends State<Item> {
                         width: AppConst.sdp(context, 80),
                       ),
                       SizedBox(
-                        width: AppConst.sdp(context, 160),
+                        width: widget.playerOnServer
+                            ? AppConst.sdp(context, 160)
+                            : AppConst.sdp(context, 177),
                         child: Text(
                           widget.naming!,
                           style: TextStyle(

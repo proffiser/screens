@@ -33,7 +33,7 @@ class SixthWindow extends StatelessWidget {
             children: [
               Container(
                 height: AppConst.sdp(context, 596),
-                width: AppConst.sdp(context, 740),
+                width: AppConst.sdp(context, 1100),
                 decoration: BoxDecoration(
                   borderRadius:
                       BorderRadius.circular(AppConst.sdp(context, 30)),
@@ -48,33 +48,45 @@ class SixthWindow extends StatelessWidget {
                       right: AppConst.sdp(context, 60),
                     ),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text(
-                          "Название",
-                          style: TextStyle(
-                            fontSize: AppConst.sdp(context, 30),
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white,
+                        SizedBox(
+                          width: AppConst.sdp(context, 440),
+                          child: Text(
+                            "Название",
+                            style: TextStyle(
+                              fontFamily: "Norm",
+                              fontSize: AppConst.sdp(context, 30),
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white.withOpacity(0.5),
+                            ),
                           ),
                         ),
                         SizedBox(
-                          width: AppConst.sdp(context, 40),
+                          width: AppConst.sdp(context, 80),
                         ),
-                        Text(
-                          "Город",
-                          style: TextStyle(
-                            fontSize: AppConst.sdp(context, 30),
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white,
+                        SizedBox(
+                          width: AppConst.sdp(context, 204),
+                          child: Text(
+                            "Город",
+                            style: TextStyle(
+                              fontFamily: "Norm",
+                              fontSize: AppConst.sdp(context, 30),
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white.withOpacity(0.5),
+                            ),
                           ),
+                        ),
+                        SizedBox(
+                          width: AppConst.sdp(context, 50),
                         ),
                         Text(
                           "Расстояние",
                           style: TextStyle(
+                            fontFamily: "Norm",
                             fontSize: AppConst.sdp(context, 30),
                             fontWeight: FontWeight.w500,
-                            color: Colors.white,
+                            color: Colors.white.withOpacity(0.5),
                           ),
                         ),
                         SizedBox(
@@ -87,7 +99,7 @@ class SixthWindow extends StatelessWidget {
               ),
               Container(
                 height: AppConst.sdp(context, 501),
-                width: AppConst.sdp(context, 740),
+                width: AppConst.sdp(context, 1100),
                 decoration: BoxDecoration(
                   borderRadius:
                       BorderRadius.circular(AppConst.sdp(context, 30)),
@@ -127,7 +139,7 @@ class SixthWindow extends StatelessWidget {
             height: AppConst.sdp(context, 20),
           ),
           Button(
-            width: 360,
+            width: 539,
             doubleButton: true,
             disableButton: state.choosenElement == null,
             firstButtonText: "Закрыть",

@@ -30,7 +30,7 @@ class FifthWindow extends StatelessWidget {
           ),
           Container(
             height: AppConst.sdp(context, 547),
-            width: AppConst.sdp(context, 740),
+            width: AppConst.sdp(context, 1000),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(AppConst.sdp(context, 30)),
               color: const Color(0xff8649D4).withOpacity(0.3),
@@ -60,7 +60,7 @@ class FifthWindow extends StatelessWidget {
             height: AppConst.sdp(context, 20),
           ),
           Button(
-            width: 360,
+            width: 490,
             doubleButton: true,
             disableButton: state.choosenElement == null,
             firstButtonText: "Закрыть",

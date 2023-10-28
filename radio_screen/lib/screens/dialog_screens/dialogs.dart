@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:radio_screen/screens/dialog_screens/2window.dart';
+import 'package:radio_screen/screens/dialog_screens/3window.dart';
+import 'package:radio_screen/screens/dialog_screens/4window.dart';
+import 'package:radio_screen/screens/dialog_screens/5window.dart';
 import 'package:radio_screen/screens/dialog_screens/6window.dart';
 import 'package:radio_screen/screens/dialog_screens/players_on_server.dart';
 import 'package:radio_screen/screens/dialog_screens/widgets/dialog_continer.dart';
@@ -11,7 +15,7 @@ class DialogScreens extends StatelessWidget {
     return const Column(
       children: [
         DialogContiner(
-          child: PlayersOnServer(),
+          child: SecondWindow(),
         ),
       ],
     );
