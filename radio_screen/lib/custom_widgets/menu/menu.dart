@@ -77,9 +77,10 @@ class _MenuState extends State<Menu> {
                               child: const TextField(
                                 autofocus: true,
                                 style: TextStyle(
-                                    fontFamily: "Norm",
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.white),
+                                  fontFamily: "Akrobat",
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                ),
                                 decoration:
                                     InputDecoration(border: InputBorder.none),
                               ),
