@@ -48,7 +48,9 @@ class _MenuState extends State<Menu> {
                       left: AppConst.sdp(context, 30),
                       right: AppConst.sdp(context, 20),
                       top: AppConst.sdp(context, 20),
-                      bottom: AppConst.sdp(context, 30),
+                      bottom: MediaQuery.of(context).viewInsets.bottom == 0
+                          ? AppConst.sdp(context, 30)
+                          : AppConst.sdp(context, 130),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
