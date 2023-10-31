@@ -19,6 +19,7 @@ class RadioInterface extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -28,7 +29,9 @@ class RadioInterface extends StatelessWidget {
         ),
         child: Padding(
           padding: EdgeInsets.only(
-            bottom: sdp(context, 58),
+            bottom: MediaQuery.of(context).viewInsets.bottom != 0
+                ? sdp(context, 188)
+                : sdp(context, 58),
             left: sdp(context, 60),
           ),
           child: Row(

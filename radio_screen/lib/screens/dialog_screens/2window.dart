@@ -50,30 +50,27 @@ class _SecondWindowState extends State<SecondWindow> {
               color: const Color(0xff7138B8).withOpacity(0.5),
               borderRadius: BorderRadius.circular(AppConst.sdp(context, 20)),
             ),
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: TextField(
-                controller: textEditingController,
-                textAlignVertical: TextAlignVertical.center,
-                style: TextStyle(
-                  color: Colors.white.withOpacity(0.8),
+            child: TextField(
+              textAlign: TextAlign.left,
+              controller: textEditingController,
+              style: TextStyle(
+                color: Colors.white.withOpacity(0.8),
+                fontFamily: "Norm",
+                fontSize: AppConst.sdp(context, 30),
+                fontWeight: FontWeight.w500,
+              ),
+              decoration: InputDecoration(
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: AppConst.sdp(context, 35),
+                  vertical: AppConst.sdp(context, 70) / 2,
+                ),
+                border: InputBorder.none,
+                hintText: "Ваш ответ",
+                hintStyle: TextStyle(
+                  color: Colors.white.withOpacity(0.5),
                   fontFamily: "Norm",
                   fontSize: AppConst.sdp(context, 30),
                   fontWeight: FontWeight.w500,
-                ),
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.only(
-                    left: AppConst.sdp(context, 35),
-                    bottom: AppConst.sdp(context, 40),
-                  ),
-                  border: InputBorder.none,
-                  hintText: "Ваш ответ",
-                  hintStyle: TextStyle(
-                    color: Colors.white.withOpacity(0.5),
-                    fontFamily: "Norm",
-                    fontSize: AppConst.sdp(context, 30),
-                    fontWeight: FontWeight.w500,
-                  ),
                 ),
               ),
             ),

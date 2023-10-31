@@ -10,17 +10,23 @@ class DialogContiner extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(AppConst.sdp(context, 40)),
-        gradient: const LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          colors: [
-            Color(0xff350382),
-            Color.fromARGB(255, 26, 3, 56),
-            // Color(0xff7a3ace),
-          ],
-        ),
+        color: Color.fromRGBO(32, 13, 58, 0.95),
       ),
-      child: child,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(AppConst.sdp(context, 40)),
+          gradient: const LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            stops: [0.05, 0.45],
+            colors: [
+              Color.fromRGBO(112, 0, 255, 0.3),
+              Color.fromRGBO(112, 0, 255, 0),
+            ],
+          ),
+        ),
+        child: child,
+      ),
     );
   }
 }
