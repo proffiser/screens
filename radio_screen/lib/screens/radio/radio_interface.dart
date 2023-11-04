@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:radio_screen/custom_widgets/menu/menu.dart';
 import 'package:radio_screen/screens/stripes/stripe_screnn_center.dart';
-import 'package:radio_screen/screens/stripes/stripes_screen.dart';
 
 double sdp(BuildContext context, double px) {
   double width = MediaQuery.of(context).size.width;
@@ -35,9 +34,9 @@ class RadioInterface extends StatelessWidget {
             left: sdp(context, 60),
           ),
           child:
-              // Row(
+              //  Row(
               //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: [
+              //   children: const [
               //     Column(
               //       mainAxisAlignment: MainAxisAlignment.center,
               //       children: [
@@ -45,7 +44,7 @@ class RadioInterface extends StatelessWidget {
               //       ],
               //     ),
               //   ],
-              // )
+              // ),
               const Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [

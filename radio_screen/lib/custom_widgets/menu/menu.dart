@@ -35,7 +35,7 @@ class _MenuState extends State<Menu> {
             // height:
             //     expand ? AppConst.sdp(context, 853) : AppConst.sdp(context, 454),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(AppConst.sdp(context, 10)),
               gradient: const LinearGradient(
                 begin: Alignment.centerRight,
                 end: Alignment.centerLeft,
@@ -56,29 +56,24 @@ class _MenuState extends State<Menu> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
-                          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          // mainAxisSize: MainAxisSize.max,
-                          // crossAxisAlignment: CrossAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                bottom: AppConst.sdp(context, 5),
-                              ),
-                              child: GestureDetector(
-                                onTap: () {
-                                  context.read<MenuCubit>().expand();
-                                },
-                                child: SvgPicture.asset(
-                                  "assets/image/search.svg",
-                                  height: AppConst.sdp(context, 82),
-                                ),
+                            GestureDetector(
+                              onTap: () {
+                                context.read<MenuCubit>().expand();
+                              },
+                              child: SvgPicture.asset(
+                                "assets/image/search.svg",
+                                height: AppConst.sdp(context, 74),
+                                width: AppConst.sdp(context, 74),
                               ),
                             ),
                             SizedBox(
                               width: AppConst.sdp(context, 590),
-                              child: const TextField(
+                              child: TextField(
                                 autofocus: true,
                                 style: TextStyle(
+                                  fontSize: AppConst.sdp(context, 40),
                                   fontFamily: "Akrobat",
                                   fontWeight: FontWeight.w500,
                                   color: Colors.white,

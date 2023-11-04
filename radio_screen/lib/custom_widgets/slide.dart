@@ -10,7 +10,7 @@ class Slide extends StatelessWidget {
       padding: EdgeInsets.only(left: 10),
       thumbVisibility: true,
       trackVisibility: true,
-      thickness: AppConst.sdp(context, 16),
+      thickness: AppConst.sdp(context, 19),
       radius: Radius.circular(AppConst.sdp(context, 5)),
       trackRadius: Radius.circular(AppConst.sdp(context, 5)),
       trackColor: const Color(0xff230945),
